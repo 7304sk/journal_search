@@ -1,0 +1,53 @@
+<?php phpinfo();<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- meta information -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>雑誌検索</title>
+    <!-- RADIX -->
+    <link rel="stylesheet" href="https://unpkg.com/radix-library@4.1.3/radix.min.css" crossorigin>
+    <script src="https://unpkg.com/radix-library@4.1.3/radix.min.js" crossorigin></script>
+    <!-- user`s stylesheets -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- user`s javascript -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/journal.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="centering">
+            <h1>雑誌検索</h1>
+        </div>
+    </header>
+    <main>
+        <article class="fb-brackets">
+            <section>
+                <form method="get" action="#" class="mailform">
+                    <dl>
+                        <dt>タイトル</dt>
+                        <dd><input class="box wide" size="20" type="text" name="タイトル" /></dd>
+                        <dt>著者名</dt>
+                        <dd><input class="box wide" size="20" type="text" name="著者名" /></dd>
+                        <dt>巻</dt>
+                        <dd><input class="box wide" size="20" type="text" name="巻" /></dd>
+                    </dl>
+                    <div class="box-center">
+                        <input class="button reset" type="reset" value="リセット" />
+                        <input class="button submit" type="submit" value="検索" />
+                    </div>
+                </form>
+            </section>
+        </article>
+    </main>
+    <footer>
+        journal search
+    </footer>
+</body>
+
+</html>
