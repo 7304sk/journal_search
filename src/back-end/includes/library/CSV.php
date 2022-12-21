@@ -52,8 +52,16 @@ class CSV {
         $this->datas = $arr;
     }
 
-    public function search() {
-        $this->result = $this->datas;
+    public function search( $dict ) {
+        $result = $this->datas;
+        foreach ( $this->datas as $i => $row ) {
+            $drop = false;
+            foreach ( $dict as $key => $val ) {
+                if( stristr( $row[$key], $val ) === false ) $drop = true;
+            }
+            if ( $drop ) unset( $result[$i] );
+        }
+        $this->result = array_values( $result );
     }
 
     public function output() {
