@@ -1,4 +1,4 @@
-<?php phpinfo();<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -31,11 +31,11 @@
                 <form method="get" action="#" class="mailform">
                     <dl>
                         <dt>タイトル</dt>
-                        <dd><input class="box wide" size="20" type="text" name="タイトル" /></dd>
+                        <dd><input class="box wide" size="20" type="text" name="title_ja" /></dd>
                         <dt>著者名</dt>
-                        <dd><input class="box wide" size="20" type="text" name="著者名" /></dd>
+                        <dd><input class="box wide" size="20" type="text" name="authors" /></dd>
                         <dt>巻</dt>
-                        <dd><input class="box wide" size="20" type="text" name="巻" /></dd>
+                        <dd><input class="box wide" size="20" type="text" name="vol" /></dd>
                     </dl>
                     <div class="box-center">
                         <input class="button reset" type="reset" value="リセット" />
@@ -43,11 +43,12 @@
                     </div>
                 </form>
             </section>
+            <section>
+                <div id="journal-root"></div>
+            </section>
         </article>
     </main>
-    <footer>
-        journal search
-    </footer>
+    <footer>journal search</footer>
 </body>
 
 </html>
