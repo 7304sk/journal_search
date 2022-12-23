@@ -7,8 +7,7 @@ define( 'APP_PATH', __DIR__ . '/' );
 define( 'APP_URL', ( ( ( ! empty( $_SERVER[ 'HTTPS' ] ) && $_SERVER[ 'HTTPS' ] !== 'off' ) ) ? 'https://' : 'http://' ) . $_SERVER[ 'HTTP_HOST' ] . $_SERVER[ 'REQUEST_URI' ] );
 
 // require
-require_once APP_PATH . 'config.php';
-require APP_PATH . 'includes/loader.php';
+require_once APP_PATH . 'includes/loader.php';
 
 // sanitize $_GET
 $_GET = isset( $_GET ) ? clearNull( $_GET ) : array();
