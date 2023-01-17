@@ -63,24 +63,98 @@ main h3 {
     font-weight: 600;
 }
 
-.error-box {
-    padding: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
+/** 入力画面用 */
+.journal-form dl {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    border: 2px solid #333;
+    row-gap: 1px;
 }
 
-.error-box p {
-    margin-bottom: 0;
-}
-
-.errmsg {
-    color: red;
+.journal-form dl dt {
+    grid-column: 1;
+    padding: .5rem 1rem;
+    background: #333;
+    color: #fff;
     font-weight: 700;
+    text-align: center;
 }
 
-.bold {
-    font-weight: bolder;
+.journal-form  dl dt:nth-of-type(2n) {
+    background: var(--mainColor);
 }
+
+.journal-form dl dd {
+    grid-column: 2;
+    padding: .5rem 1rem;
+    background: #eee;
+}
+
+.journal-form dl dd:nth-of-type(2n) {
+    background: var(--mainLightColor);
+}
+
+.journal-form .box {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 2px 1px rgb(0 0 0 / 8%) inset;
+    display: inline-block;
+    width: 100%;
+    max-width: 10rem;
+    font-size: .95rem;
+    line-height: 1.4;
+    padding: 0.3rem 0.5rem;
+}
+.journal-form .box.wide {
+    max-width: none;
+}
+
+.journal-form label.check {
+    display: inline-block;
+    padding-left: 1.4rem;
+    position: relative;
+    line-height: 1.4;
+    cursor: pointer;
+    margin-right: .5rem;
+}
+
+.journal-form label.check > input {
+    display: none;
+}
+
+.journal-form label.check::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #ccc;
+    background: #fff;
+    position: absolute;
+    top: .25rem;
+    left: .3rem;
+}
+
+.journal-form label.check::after {
+    content: "";
+    display: inline-block;
+    width: .5rem;
+    height: 1rem;
+    position: absolute;
+    top: .1rem;
+    left: .7rem;
+    border-bottom: 4px solid #c94d00;
+    border-right: 4px solid #c94d00;
+    transform: translate(-.2rem, .2rem) rotate(-100deg) scale(.5);
+    opacity: 0;
+    transition: .1s ease-out;
+}
+.journal-form label.check:has(input:checked)::after {
+    transform: rotate(45deg);
+    opacity: 1;
+}
+
 
 .box-center {
     display: flex;
@@ -98,200 +172,6 @@ input.button {
 
 input.button:hover {
     background: var(--subLightColor);
-}
-
-dl.confirm-arr {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    border: 2px solid #333;
-    row-gap: 1px;
-}
-
-dl.confirm-arr dt {
-    grid-column: 1;
-    padding: .5rem 1rem;
-    background: #333;
-    color: #fff;
-    font-weight: 700;
-    text-align: center;
-}
-
-dl.confirm-arr dt:nth-of-type(2n) {
-    background: var(--mainColor);
-}
-
-dl.confirm-arr dd {
-    grid-column: 2;
-    padding: .5rem 1rem;
-    background: #eee;
-}
-
-dl.confirm-arr dd:nth-of-type(2n) {
-    background: var(--mainLightColor);
-}
-
-/** 入力画面用 */
-span.need {
-    padding: .2rem .8rem;
-    margin-left: 1rem;
-    display: inline-block;
-    background: #c94d00;
-    color: #fff;
-    font-size: .8rem;
-    line-height: 1rem;
-}
-.mailform dl {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    border: 2px solid #333;
-    row-gap: 1px;
-}
-
-.mailform dl dt {
-    grid-column: 1;
-    padding: .5rem 1rem;
-    background: #333;
-    color: #fff;
-    font-weight: 700;
-    text-align: center;
-}
-
-.mailform  dl dt:nth-of-type(2n) {
-    background: var(--mainColor);
-}
-
-.mailform dl dd {
-    grid-column: 2;
-    padding: .5rem 1rem;
-    background: #eee;
-}
-
-.mailform dl dd:nth-of-type(2n) {
-    background: var(--mainLightColor);
-}
-
-.mailform .box {
-    color: #555;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 0.3rem;
-    box-shadow: 0 0 2px 1px rgb(0 0 0 / 8%) inset;
-    display: inline-block;
-    width: 100%;
-    max-width: 10rem;
-    font-size: .95rem;
-    line-height: 1.4;
-    padding: 0.3rem 0.5rem;
-}
-.mailform .box.wide {
-    max-width: none;
-}
-
-.mailform label.check {
-    display: inline-block;
-    padding-left: 1.4rem;
-    position: relative;
-    line-height: 1.4;
-    cursor: pointer;
-    margin-right: .5rem;
-}
-
-.mailform label.check > input {
-    display: none;
-}
-
-.mailform label.check::before {
-    content: "";
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid #ccc;
-    background: #fff;
-    position: absolute;
-    top: .25rem;
-    left: .3rem;
-}
-
-.mailform label.check::after {
-    content: "";
-    display: inline-block;
-    width: .5rem;
-    height: 1rem;
-    position: absolute;
-    top: .1rem;
-    left: .7rem;
-    border-bottom: 4px solid #c94d00;
-    border-right: 4px solid #c94d00;
-    transform: translate(-.2rem, .2rem) rotate(-100deg) scale(.5);
-    opacity: 0;
-    transition: .1s ease-out;
-}
-.mailform label.check:has(input:checked)::after {
-    transform: rotate(45deg);
-    opacity: 1;
-}
-
-.tab {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding-left: 0;
-  border: 1px solid #fe019b;
-  margin-bottom: 1.5rem;
-}
-.tab li {
-	cursor: pointer;
-	width: calc(100% / 3);
-	text-align: center;
-	background: #fcd1ed;
-	padding: .4em .5em;
-	position: relative;
-}
-.tab li:not(:last-child) {
-  border-right: 1px solid #fe019b;
-}
-.tab li.select {
-	background: #fe019b;
-        color: #fff;
-}
-.tab li.select:after {
-	content: " ";
-	display: block;
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	transform: translateX(-50%);
-	border: 1.8em solid transparent;
-	border-top: 1.2em solid #fe019b;
-}
-.tab-content > div:not(.active) {display: none;}
-.request-content img {
-    width: 100%;
-    max-width: 600px;
-    margin-inline: auto;
-}
-.request-content figure {
-  text-align: center;
-  color: #666;
-  text-decoration: underline;
-}
-.request-content dl {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border-top: 3px solid #ccc;
-  border-bottom: 2px solid #ccc;
-}
-.request-content dt {
-  font-weight: 700;
-  width: 25%;
-  border-bottom: 1px solid #ccc;
-  padding: .5em .2em;
-}
-.request-content dd {
-  width: 75%;
-  border-bottom: 1px solid #ccc;
-  padding: .5em .2em;
 }
 
 a.button {
@@ -332,14 +212,12 @@ footer {
         display: block
     }
 
-    dl.confirm-arr,
-    .mailform dl {
+    .journal-form dl {
         display: block;
         border: none;
     }
 
-    dl.confirm-arr dd,
-    .mailform dl dd {
+    .journal-form dl dd {
         margin-bottom: 1rem;
     }
 
