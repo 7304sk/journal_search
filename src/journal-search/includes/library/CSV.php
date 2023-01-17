@@ -57,7 +57,7 @@ class CSV {
         foreach ( $this->datas as $i => $row ) {
             $drop = false;
             foreach ( $dict as $key => $val ) {
-                if( stristr( $row[$key], $val ) === false ) $drop = true;
+                if( !empty( $val ) ) if( stristr( $row[$key], $val ) === false ) $drop = true;
             }
             if ( $drop ) unset( $result[$i] );
         }
