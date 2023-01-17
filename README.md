@@ -12,7 +12,7 @@ docker-compose build
 docker-compose up -d
 ```
 
-And then, visit http://localhost:8080/front-end/journal.html
+And then, visit http://localhost:8080/journal.html
 
 ## deactivate and remove containers
 
